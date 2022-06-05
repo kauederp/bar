@@ -1,9 +1,3 @@
-<?php
-    if(isset($_GET['logout'])){
-        unset($_SESSION['logged']);
-        unset($_SESSION['user']);
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,15 +19,23 @@
                 <div class="d-flex justify-content-center">
                     <img id="logo" src="imgs/logo.webp" alt="logo_alien">
                 </div>
-                <h1 class="text-center">Abdução</h1>
+                <h1 class="text-center">Registro</h1>
                 <form class="col-12" action="" method="post">
+
+                    <label for="text-capitalize">Nome</label>
+                    <input class="form-control" type="text" name="nome">
+
                     <label class="text-capitalize" for="email">email:</label>
                     <input class="form-control" type="email" name="email" id="inputEmail">
+                    
                     <label class="text-capitalize" for="senha">senha:</label>
                     <input class="form-control" type="password" name="senha" id="inputSenha">
+
+                    <label class="text-capitalize" for="senha">repetir senha:</label>
+                    <input class="form-control" type="password" name="repeteSenha" id="inputRepeteSenha">
+                    
                     <div class="d-flex justify-content-end mt-2">
-                        <a href="?p=registro">não possuo</a>
-                        <input class="btn btn-success" name="login" type="submit" value="login">
+                        <input id="registroBtn" class="btn btn-success" name="registrar" type="submit" value="registrar">
                     </div>
                 </form>
             </div>
@@ -41,7 +43,7 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 
 </html>
