@@ -5,11 +5,11 @@ class Database{
 
     private function __construct(){
         
-        $host='';
-        $name='';
-        $usuario='';
+        $host='localhost';
+        $name='bar';
+        $usuario='root';
         $senha='';
-        $driver='';
+        $driver='mysql';
 
         try{
             #Atribui o objeto PDO a variável estática
